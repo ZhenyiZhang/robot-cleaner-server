@@ -6,6 +6,7 @@ const directions = require("../constant/directions");
 const pause = require("../functions/pause");
 const WebSocket = require("ws");
 
+// the time of robot moving one step
 const actionTime = 200;
 
 class RobotClean {
@@ -29,6 +30,7 @@ class RobotClean {
 		return mapToString(this.map, this.robotPos);
 	}
 
+	// send map and robot status report to clients
 	sendData() {
 		this.websocket.clients.forEach(client => {
 			if (client.readyState === WebSocket.OPEN) {
@@ -52,6 +54,7 @@ class RobotClean {
 		}
 	}
 
+	// move the robot one step back
 	moveBack(curDir) {
 		const x = this.robotPos[0],
 			y = this.robotPos[1];
@@ -62,6 +65,7 @@ class RobotClean {
 		this.sendData();
 	}
 
+	// move robot one step forward
 	moveForward(curDir) {
 		this.printMap();
 		const x = this.robotPos[0],
