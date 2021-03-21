@@ -1,0 +1,15 @@
+{
+  "name": "avidbots-assigment-server",
+  "version": "1.0.0",
+  "description": "server for the programming test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Zhenyi(Bruce) Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.4.4"
+  }
+}
