@@ -81,7 +81,6 @@ class RobotClean {
 		const x = this.robotPos[0],
 			y = this.robotPos[1];
 		if (this.map[x][y] === "_") return;
-
 		for (let i = 0; i < directions.length; i++) {
 			if (this.moveForward(directions[curDir])) {
 				this.explore(curDir);
