@@ -1,6 +1,4 @@
-const { mapA, mapB } = require("./maps/maps");
 const fs = require("fs");
-const mapC = fs.readFileSync("./maps/mapc.txt");
 const RobotClean = require("./classes/RobotClean");
 const WebSocket = require("ws");
 
